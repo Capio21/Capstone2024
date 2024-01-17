@@ -18,4 +18,8 @@ class UserController extends BaseController
     {
         return view('checkout');
     }
+    public function Landing()
+    {
+        return view('Landing');
+    }
 }
