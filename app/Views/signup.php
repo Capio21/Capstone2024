@@ -92,7 +92,7 @@
                 </div>
             </form>
 
-            <p class="text-center">Already have an account? <a href="/signin">Login</a></p>
+            
         </div>
     </div>
 </body>

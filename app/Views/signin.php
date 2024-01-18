@@ -56,9 +56,14 @@
 
 <body>
     <div class="container login-container">
+    <div class="container-fluid">
+            <div class="logo">
+                <img src="/logo.png" alt="Mucofaco Logo" class="img-fluid">
+            </div>
+        </div>
         <div class="row justify-content-md-center">
             <div class="col-lg-12 col-md-12 col-sm-12">
-                <h2 class="text-center mb-4">Login</h2>
+                <h2 class="text-center mb-4">MOCUFACO LOGIN</h2>
                 
                 <?php if(session()->getFlashdata('msg')):?>
                     <div class="alert alert-warning">
@@ -78,7 +83,7 @@
                          <button type="submit" class="btn btn-success">Sign in</button>
                     </div>
                     
-                    <p class="text-center">Don't have an account? <a href="/signup">Sign up</a></p>
+                    
                 </form>
             </div>
         </div>

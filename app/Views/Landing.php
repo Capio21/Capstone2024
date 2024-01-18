@@ -216,7 +216,7 @@
         // When the user clicks the confirm logout button, perform the logout action
         confirmLogout.addEventListener("click", () => {
             // Perform your logout logic here (e.g., redirect to a logout page)
-            window.location.href = "/signup"; // Example redirection
+            window.location.href = "/signin"; // Example redirection
         });
     </script>
 </body>

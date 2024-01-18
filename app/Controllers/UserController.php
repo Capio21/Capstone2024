@@ -22,4 +22,12 @@ class UserController extends BaseController
     {
         return view('Landing');
     }
+    public function Workshop()
+    {
+        return view('Workshop');
+    }
+    public function Admin()
+    {
+        return view('Admin');
+    }
 }
