@@ -10,8 +10,59 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="../sidebar/css/style.css">
   </head>
+  <style> body {
+     
+      background: linear-gradient(45deg, #4CAF50, #FFFF00);
+      
+    }
+    .modal-content {
+            background-color: #fefefe;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #000;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .close {
+            color: #000;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #555;
+        }
+
+        #logoutBtn {
+            padding: 10px 15px;
+            border: 2px solid #000;
+            background-color: #000;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            align-items: center;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #logoutBtn:hover {
+            background-color: #555;
+            border-color: #555;
+        }
+
+
+</style>
   <body>
-		
+  </ul>
+
+
+
 		<div class="wrapper d-flex align-items-stretch">
 			<nav id="sidebar">
 				<div class="custom-menu">
@@ -20,13 +71,13 @@
         </div>
 	  		<div class="img bg-wrap text-center py-4" style="background-image: url(images/bg_1.jpg);">
 	  			<div class="user-logo">
-	  				<div class="img" style="background-image: url(images/logo.jpg);"></div>
-	  				<h3>Catriona Henderson</h3>
+	  				
+	  				<h3>MocuAdmin</h3>
 	  			</div>
 	  		</div>
         <ul class="list-unstyled components mb-5">
           <li class="active">
-            <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
+            <a href="#"><span class="fa fa-home mr-3"></span> Dashboard</a>
           </li>
           <li>
               <a href="#"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Download</a>
@@ -35,7 +86,7 @@
             <a href="#"><span class="fa fa-gift mr-3"></span> Gift Code</a>
           </li>
           <li>
-            <a href="#"><span class="fa fa-trophy mr-3"></span> Top Review</a>
+            <a href="/signup"><span class="fa fa-trophy mr-3"></span> Registation Confirmation</a>
           </li>
           <li>
             <a href="#"><span class="fa fa-cog mr-3"></span> Settings</a>
@@ -43,24 +94,34 @@
           <li>
             <a href="#"><span class="fa fa-support mr-3"></span> Support</a>
           </li>
-          <li>
-            <a href="#"><span class="fa fa-sign-out mr-3"></span> Sign Out</a>
-          </li>
-        </ul>
+          
+         <!-- Button trigger modal -->
+<!-- Button trigger modal -->
+
+        
+    <!-- Logout Modal -->
+
+        
+
 
     	</nav>
 
         <!-- Page Content  -->
-      <div id="content" class="p-4 p-md-5 pt-5">
-        <h2 class="mb-4">Sidebar #09</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
+        <div id="content" class="p-4 p-md-5 pt-5 mx-auto text-center">
+    <h2 class="mb-4">Hi mga Ka-MocuFaco</h2>
+    <img src="/logo.png" alt="Mucofaco Logo" class="img-fluid">
+    
 		</div>
+
 
     <script src="../sidebar/js/jquery.min.js"></script>
     <script src="../sidebar/js/popper.js"></script>
     <script src="../sidebar/js/bootstrap.min.js"></script>
     <script src="../sidebar/js/main.js"></script>
   </body>
+  <script>
+ 
+
+  </script>
+ 
 </html>

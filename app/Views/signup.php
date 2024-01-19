@@ -1,67 +1,116 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
+  	<title>Sidebar 09</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(45deg, #4CAF50, #FFFF00);
-            color: black; /* Change the font color to black */
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        .container-fluid {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../sidebar/css/style.css">
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(45deg, #4CAF50, #FFFF00);
+      color: black; /* Font color set to black */
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        .logo {
-            text-align: center;
-            margin-right: 20px; /* Adjust the margin as needed */
-            display: flex;
-            align-items: center; /* Center vertically */
-            justify-content: center; /* Center horizontally */
-        }
+    .container-fluid {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
-        .logo img {
-            max-width: 100%;
-            max-height: 100%;
-        }
+    .logo {
+      text-align: center;
+      margin-right: 20px; /* Adjust the margin as needed */
+      display: flex;
+      align-items: center; /* Center vertically */
+      justify-content: center; /* Center horizontally */
+    }
 
-        /* Use Bootstrap's grid system for the container */
-        .register-container {
-            max-width: 600px; /* Adjust the maximum width as needed */
-            width: 100%;
-            padding: 15px;
-            background-color: #ffffff; /* Add a background color for the container */
-            border-radius: 10px; /* Add rounded corners */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-        }
+    .logo img {
+      max-width: 100%;
+      max-height: 100%;
+    }
 
-        /* Add cool font and bold style to the logo */
-        .logo img {
-            font-family: 'Cool Font'; /* Replace with your preferred cool font */
-            font-weight: bold;
-            color: black; /* Change the font color to black */
-        }
-    </style>
-    <title>Codeigniter Auth User Registration Example</title>
-</head>
+    .register-container {
+      max-width: 600px; /* Adjust the maximum width as needed */
+      width: 100%;
+      padding: 15px;
+      background-color: #ffffff; /* Background color for the container */
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    }
 
-<body>
-    
-    <div class="container-fluid">
+    /* Font and border color modifications */
+    .register-container input,
+    .register-container button {
+      color: black !important; /* Set font color to black */
+      border: 1px solid black !important; /* Set border color to black */
+    }
+
+    .register-container input::placeholder {
+      color: black !important; /* Set placeholder color to black */
+    }
+
+    .register-container h2 {
+      color: black; /* Set heading color to black */
+    }
+  </style>
+  <body>
+		
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="custom-menu">
+					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+	        </button>
+        </div>
+	  		<div class="img bg-wrap text-center py-4" style="background-image: url(images/bg_1.jpg);">
+	  			<div class="user-logo">
+	  				
+	  				<h3>MocuAdmin</h3>
+	  			</div>
+	  		</div>
+        <ul class="list-unstyled components mb-5">
+          <li class="active">
+            <a href="/admin"><span class="fa fa-home mr-3"></span> Dashboard</a>
+          </li>
+          <li>
+              <a href="#"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Download</a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-gift mr-3"></span> Gift Code</a>
+          </li>
+          <li>
+            <a href="/signup"><span class="fa fa-trophy mr-3"></span> Registation Confirmation</a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-cog mr-3"></span> Settings</a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-support mr-3"></span> Support</a>
+          </li>
+          <li>
+            <a href="/"><span class="fa fa-sign-out mr-3"></span> Sign Out</a>
+          </li>
+        </ul>
+
+    	</nav>
+
+        <!-- Page Content  -->
+        <div class="container-fluid">
         
 
         <!-- Use Bootstrap's grid system for the container -->
@@ -95,6 +144,10 @@
             
         </div>
     </div>
-</body>
 
+    <script src="../sidebar/js/jquery.min.js"></script>
+    <script src="../sidebar/js/popper.js"></script>
+    <script src="../sidebar/js/bootstrap.min.js"></script>
+    <script src="../sidebar/js/main.js"></script>
+  </body>
 </html>
