@@ -11,7 +11,7 @@ $routes->get('/cart', 'UserController::cart');
 $routes->get('/checkout', 'UserController::checkout');
 $routes->get('/Landing', 'UserController::Landing');
 $routes->get('/Workshop', 'UserController::Workshop');
-$routes->get('/Admin', 'UserController::Admin');
+$routes->get('/admin', 'UserController::Admin');
 
 
 /*
