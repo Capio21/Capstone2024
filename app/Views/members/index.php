@@ -51,6 +51,30 @@
             background-color: #555;
             border-color: #555;
         }
+         .info-card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #fff;
+            transition: transform 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .table {
+    margin-top: 80px;
+    margin: 0 auto;
+}
+
+
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
         
         /* Add your custom styles here if needed */
     </style>
@@ -73,7 +97,7 @@
 	  		</div>
         <ul class="list-unstyled components mb-5">
           <li class="active">
-            <a href="#"><span class="fa fa-home mr-3"></span> Dashboard</a>
+            <a href="/admin"><span class="fa fa-home mr-3"></span> Dashboard</a>
           </li>
           <li>
             <a href="members"><span class="fa fa-trophy mr-3"></span> Members list Create</a>
@@ -103,42 +127,45 @@
         </nav>
 
         <!-- Page Content -->
-        <h2>Edit Member</h2>
-
-<form action="/members/update" method="post">
-    <input type="hidden" name="id" value="<?= $member['id']; ?>">
-
-    <label for="first_name">First Name:</label>
-    <input type="text" name="first_name" value="<?= $member['first_name']; ?>" required><br>
-
-    <label for="last_name">Last Name:</label>
-    <input type="text" name="last_name" value="<?= $member['last_name']; ?>" required><br>
-
-    <label for="middle_name">Middle Name:</label>
-    <input type="text" name="middle_name" value="<?= $member['middle_name']; ?>"><br>
-
-    <label for="contact_number">Contact Number:</label>
-    <input type="text" name="contact_number" value="<?= $member['contact_number']; ?>" required><br>
-
-    <label for="sex">Sex:</label>
-    <select name="sex" required>
-        <option value="Male" <?= ($member['sex'] == 'Male') ? 'selected' : ''; ?>>Male</option>
-        <option value="Female" <?= ($member['sex'] == 'Female') ? 'selected' : ''; ?>>Female</option>
-        <option value="Other" <?= ($member['sex'] == 'Other') ? 'selected' : ''; ?>>Other</option>
-    </select><br>
-
-    <label for="location">Location:</label>
-    <input type="text" name="location" value="<?= $member['location']; ?>" required><br>
-
-    
-
-    <!-- Add more fields as needed -->
-
-    <button type="submit">Update</button>
-</form>
-
-
-<a href="/members">Back to List</a>
+        <div id="content" class="p-4 p-md-5">
+            <!-- Members List -->
+            <div class="container">
+                <h2>Members List</h2>
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                           
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Middle Name</th>
+                            <th>Contact Number</th>
+                            <th>Sex</th>
+                            <th>Location</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($members as $member): ?>
+                            <tr>
+                                
+                                <td><?= $member['first_name']; ?></td>
+                                <td><?= $member['last_name']; ?></td>
+                                <td><?= $member['middle_name']; ?></td>
+                                <td><?= $member['contact_number']; ?></td>
+                                <td><?= $member['sex']; ?></td>
+                                <td><?= $member['location']; ?></td>
+                                <td>
+                                    <a href="/members/edit/<?= $member['id']; ?>" class="btn btn-warning">Edit</a>
+                                    <a href="/members/delete/<?= $member['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+                <a href="/members/create" class="btn btn-primary">Add Member</a>
+            </div>
+            <!-- End Members List -->
+        </div>
     </div>
 
     <script src="../sidebar/js/jquery.min.js"></script>

@@ -82,21 +82,16 @@
             <a href="#"><span class="fa fa-home mr-3"></span> Dashboard</a>
           </li>
           <li>
-              <a href="#"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Download</a>
+            <a href="members"><span class="fa fa-trophy mr-3"></span> Members list Create</a>
           </li>
-          <li>
-            <a href="#"><span class="fa fa-gift mr-3"></span> Gift Code</a>
-          </li>
+          
           <li>
             <a href="/signup"><span class="fa fa-trophy mr-3"></span> Registation Confirmation</a>
           </li>
           <li>
             <a href="#"><span class="fa fa-cog mr-3"></span> Settings</a>
           </li>
-          <li>
-            <a href="#"><span class="fa fa-support mr-3"></span> Support</a>
-            
-          </li>
+       
           <li>
           <a href="#" onclick="openLogoutModal()"><span class="fa fa-sign-out mr-3"></span> Logout</a>
           </li>

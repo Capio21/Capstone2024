@@ -11,104 +11,70 @@
 		<link rel="stylesheet" href="../sidebar/css/style.css">
   </head>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(45deg, #4CAF50, #FFFF00);
-      color: black; /* Font color set to black */
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .container-fluid {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-
-    .logo {
-      text-align: center;
-      margin-right: 20px; /* Adjust the margin as needed */
-      display: flex;
-      align-items: center; /* Center vertically */
-      justify-content: center; /* Center horizontally */
-    }
-
-    .logo img {
-      max-width: 100%;
-      max-height: 100%;
-    }
-
-    .register-container {
-      max-width: 600px; /* Adjust the maximum width as needed */
-      width: 100%;
-      padding: 15px;
-      background-color: #ffffff; /* Background color for the container */
-      border-radius: 10px; /* Rounded corners */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
-    }
-
-    /* Font and border color modifications */
-    .register-container input,
-    .register-container button {
-      color: black !important; /* Set font color to black */
-      border: 1px solid black !important; /* Set border color to black */
-    }
-
-    .register-container input::placeholder {
-      color: black !important; /* Set placeholder color to black */
-    }
-
-    .register-container h2 {
-      color: black; /* Set heading color to black */
-    }
-    .modal-content {
-            background-color: #fefefe;
-            margin: 0 auto;
-            padding: 20px;
-            border: 2px solid #000;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 80%;
-            max-width: 400px;
-            text-align: center;
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #4CAF50, #FFFF00);
+            color: black;
+            height: 100vh;
+            display: flex;
+            align-items: left;
+            justify-content: center;
         }
 
-        .close {
-            color: #000;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .close:hover {
-            color: #555;
-        }
-
-        #logoutBtn {
-            padding: 10px 15px;
-            border: 2px solid #000;
-            background-color: #000;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
+        .container-fluid {
+            display: flex;
             align-items: center;
-            border-radius: 4px;
-            transition: background-color 0.3s, color 0.3s;
+            justify-content: center; /* Center the form horizontally */
+            height: 100vh;
+            /* Remove margin-left property */
         }
 
-        #logoutBtn:hover {
-            background-color: #555;
-            border-color: #555;
+        .logo {
+            text-align: center;
+            margin-right: px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        
-  </style>
+
+        .register-container {
+            max-width: 500px;
+            width: 100%; /* Change width to 100% */
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+            /* Remove margin auto property */
+            align-items: left;
+        }
+
+        /* Font and border color modifications */
+        .register-container input,
+        .register-container button {
+            color: black !important;
+            border: 1px solid black !important;
+        }
+
+        .register-container input::placeholder {
+            color: black !important;
+        }
+
+        .register-container h2 {
+            color: black;
+        }
+        .floating-container {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Rest of the styles remain unchanged */
+    </style>
+
   <body>
 		
 		<div class="wrapper d-flex align-items-stretch">
@@ -128,20 +94,16 @@
             <a href="/admin"><span class="fa fa-home mr-3"></span> Dashboard</a>
           </li>
           <li>
-              <a href="#"><span class="fa fa-download mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Download</a>
+            <a href="members"><span class="fa fa-trophy mr-3"></span> Members list Create</a>
           </li>
-          <li>
-            <a href="#"><span class="fa fa-gift mr-3"></span> Gift Code</a>
-          </li>
+        
           <li>
             <a href="/signup"><span class="fa fa-trophy mr-3"></span> Registation Confirmation</a>
           </li>
           <li>
             <a href="#"><span class="fa fa-cog mr-3"></span> Settings</a>
           </li>
-          <li>
-            <a href="#"><span class="fa fa-support mr-3"></span> Support</a>
-          </li>
+        
           <li>
           <a href="#" onclick="openLogoutModal()"><span class="fa fa-sign-out mr-3"></span> Logout</a>
           </li>
@@ -191,6 +153,7 @@
                     <button type="submit" class="btn btn-dark">Signup</button>
                 </div>
             </form>
+            
 
             
         </div>

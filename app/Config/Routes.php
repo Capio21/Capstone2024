@@ -31,3 +31,11 @@ $routes->get('/profile', 'ProfileController::index',['filter' => 'authGuard']);
 
 //admin controller
 
+// app/Config/Routes.php
+
+$routes->get('members', 'MemberController::index');
+$routes->get('members/create', 'MemberController::create');
+$routes->post('members/store', 'MemberController::store');
+$routes->get('members/edit/(:num)', 'MemberController::edit/$1');
+$routes->post('members/update', 'MemberController::update');
+$routes->get('members/delete/(:num)', 'MemberController::delete/$1');
