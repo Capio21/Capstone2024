@@ -26,8 +26,8 @@ class UserController extends BaseController
     {
         return view('Workshop');
     }
-    public function Admin()
+    public function admin()
     {
-        return view('Admin');
+        return view('admin');
     }
 }
