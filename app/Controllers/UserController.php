@@ -30,4 +30,8 @@ class UserController extends BaseController
     {
         return view('admin');
     }
+    public function registration()
+    {
+        return view('registration');
+    }
 }

@@ -12,6 +12,7 @@ $routes->get('/checkout', 'UserController::checkout');
 $routes->get('/Landing', 'UserController::Landing');
 $routes->get('/Workshop', 'UserController::Workshop');
 $routes->get('/admin', 'UserController::Admin');
+$routes->get('/registration', 'UserController::registration');
 
 
 /*
