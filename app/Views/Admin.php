@@ -55,6 +55,8 @@
             background-color: #555;
             border-color: #555;
         }
+        
+    
 
 
 </style>
@@ -93,7 +95,21 @@
           </li>
           <li>
             <a href="#"><span class="fa fa-support mr-3"></span> Support</a>
+            
           </li>
+          <li>
+          <a href="#" onclick="openLogoutModal()"><span class="fa fa-sign-out mr-3"></span> Logout</a>
+          </li>
+
+
+          <div id="logoutModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeLogoutModal()">&times;</span>
+        <h2>Logout Confirmation</h2>
+        <p>Are you sure you want to logout?</p>
+        <button id="logoutBtn" onclick="logout()">Logout</button>
+    </div>
+</div>
           
          <!-- Button trigger modal -->
 <!-- Button trigger modal -->
@@ -101,7 +117,8 @@
         
     <!-- Logout Modal -->
 
-        
+    
+
 
 
     	</nav>
@@ -120,7 +137,29 @@
     <script src="../sidebar/js/main.js"></script>
   </body>
   <script>
- 
+ // Function to display the logout modal
+ function openLogoutModal() {
+        var logoutModal = document.getElementById('logoutModal');
+        logoutModal.style.display = 'block';
+    }
+
+    // Function to close the logout modal
+    function closeLogoutModal() {
+        var logoutModal = document.getElementById('logoutModal');
+        logoutModal.style.display = 'none';
+    }
+
+    // Function to handle the logout action (you can customize this based on your needs)
+    function logout() {
+        // Add your logout logic here
+        // For example, redirect to a logout page or perform an AJAX request to log the user out
+        
+        // Replace the following line with your actual logout logic
+        alert('Logout successful'); 
+
+        // Redirect to the home page after logout
+        window.location.href = '/';
+    }
 
   </script>
  
